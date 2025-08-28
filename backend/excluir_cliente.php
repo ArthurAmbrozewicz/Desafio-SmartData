@@ -15,7 +15,7 @@ if (isset($_GET['id'])) {
     $stmt->bind_param("i", $id);
 
     if ($stmt->execute()) {
-        // Redireciona apenas se a execução deu certo
+        
         header("Location: /smartdata/Frontend/lista_clientes.php");
         exit;
     } else {

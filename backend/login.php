@@ -28,18 +28,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['usuario_id'] = $id;
             $_SESSION['usuario_nome'] = $nome_usuario;
 
-            // Redireciona para a página principal
+            
             echo "<script>alert('Login bem-sucedido!');
             window.location.href='/smartdata/Frontend/lista_clientes.php';</script>";
             exit;
         } else {
-            // Senha incorreta
+            
             echo "<script>alert('Usuário e/ou Senha incorreta!');
             window.location.href='/smartdata/Frontend/view_login.php';</script>";
             exit;
         }
     } else {
-        // Usuário não encontrado
+        
         echo "<script>alert('Usuário e/ou Senha incorreta!');
         window.location.href='/smartdata/Frontend/view_login.php';</script>";
         exit;

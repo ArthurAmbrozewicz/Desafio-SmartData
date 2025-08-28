@@ -2,7 +2,6 @@
 include 'conexao.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Pega os valores do formulário
     $id        = intval($_POST['id'] ?? 0);
     $nome      = trim($_POST['nome'] ?? '');
     $documento = trim($_POST['documento'] ?? '');

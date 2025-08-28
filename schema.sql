@@ -1,8 +1,6 @@
--- Criação do banco
 CREATE DATABASE smart_data;
 USE smart_data;
 
--- Tabela de usuários
 CREATE TABLE usuario (
     id INT NOT NULL AUTO_INCREMENT,
     login VARCHAR(50) NOT NULL UNIQUE,
@@ -11,7 +9,6 @@ CREATE TABLE usuario (
     PRIMARY KEY (id)
 );
 
--- Tabela de clientes
 CREATE TABLE cliente (
     id INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,

@@ -33,7 +33,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Criptografando a senha no DB
             $senha_hash = password_hash($senha_usuario, PASSWORD_DEFAULT);
 
-            // 4️⃣ Insere usuário
             $sql_insert = "INSERT INTO usuario (login, email, senha) VALUES (?, ?, ?)";
             $stmt_insert = $conn->prepare($sql_insert);
             $stmt_insert->bind_param("sss", $nome_usuario, $email, $senha_hash);

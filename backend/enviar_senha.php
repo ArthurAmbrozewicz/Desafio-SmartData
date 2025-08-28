@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $mail->isHTML(true);
             $mail->Subject = 'Sua nova senha temporária';
-            $mail->Body = "Sua senha temporária é: <b>$senha_temp</b><br>Use esta senha para entrar e altere-a depois.";
+            $mail->Body = "Sua senha temporária é: <b>$senha_temp</b>";
 
 
             $mail->send();
