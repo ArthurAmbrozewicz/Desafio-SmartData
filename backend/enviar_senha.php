@@ -4,6 +4,7 @@ use PHPMailer\PHPMailer\Exception;
 
 require '../vendor/autoload.php'; 
 include 'conexao.php'; 
+$config = include __DIR__ . '/config.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = trim($_POST['email']);
@@ -27,13 +28,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Envia por e-mail
         $mail = new PHPMailer(true);
         try {
+            
+
             $mail->isSMTP();
-            $mail->Host = 'smtp.seuservidor.com';
+            $mail->Host = $config['email_host'];
             $mail->SMTPAuth = true;
-            $mail->Username = 'arthurambrozewicz@gmail.com';
-            $mail->Password = 'fkar qddr frqv eibs';
+            $mail->Username = $config['email_user'];
+            $mail->Password = $config['email_pass'];
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
+
 
             $mail->setFrom('arthurambrozewicz@gmail.com', 'Sistema de Clientes');
             $mail->addAddress($email);
