@@ -1,0 +1,17 @@
+# Arquivo de configuração sensível
+config.php
+
+# Arquivos de log
+*.log
+
+# Arquivos temporários
+*.cache
+*.tmp
+
+# Diretórios comuns para PHP
+/vendor
+/node_modules
+
+# Configurações locais (XAMPP, VSCode, etc.)
+/.idea
+/.vscode
