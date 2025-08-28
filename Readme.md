@@ -13,7 +13,7 @@ O foco principal é a **funcionalidade**, mas também foi adicionada uma interfa
 - 🔑 **Autenticação de Usuário**
   - Login com usuário e senha.
   - Logout para encerrar a sessão.
-  -Recuperaçao de senha via phpmailer
+  - Recuperaçao de senha via phpmailer
 
 - 👥 **Gerenciamento de Clientes**
   - Listagem de clientes.
