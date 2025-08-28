@@ -15,7 +15,6 @@ if (isset($_GET['id'])) {
     $stmt->bind_param("i", $id);
 
     if ($stmt->execute()) {
-        
         header("Location: /smartdata/Frontend/lista_clientes.php");
         exit;
     } else {

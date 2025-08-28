@@ -44,7 +44,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $stmt->bind_param("ssssi", $nome, $documento, $telefone, $endereco, $id);
 
         if ($stmt->execute()) {
-            // Sucesso
             header("Location: /smartdata/Frontend/lista_clientes.php?msg=editado");
             exit;
         } else {
